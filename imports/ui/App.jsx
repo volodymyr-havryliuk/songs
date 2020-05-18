@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import {withTracker} from 'meteor/react-meteor-data';
+import {Songs} from "../api/songs";
 import Song from "./Song";
 
-export default class App extends Component {
+class App extends Component {
     getSongs() {
         return [
             {_id: 1, title: 'Buddy Holly', artist: 'Weezer', votes: 10},
@@ -11,7 +13,7 @@ export default class App extends Component {
     }
 
     renderSongs() {
-        return this.getSongs().map((song) => (
+        return this.props.songs.map((song) => (
             <Song key={song._id} song={song}/>
         ));
     }
@@ -29,3 +31,9 @@ export default class App extends Component {
         );
     }
 }
+
+export default withTracker(() => {
+    return {
+        songs: Songs.find({}).fetch(),
+    };
+})(App);

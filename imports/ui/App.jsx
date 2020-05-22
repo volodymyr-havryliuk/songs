@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
 import ReactDOM from "react-dom";
 import {withTracker} from 'meteor/react-meteor-data';
+import {ReactiveVar} from "meteor/reactive-var";
 import {Songs} from "../api/songs";
 import Song from "./Song";
 
+const sort = new ReactiveVar({votes: -1});
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {sortLabel: "Desc"};
+    }
 
     renderSongs() {
         return this.props.songs.map((song) => (
@@ -33,6 +39,17 @@ class App extends Component {
         ReactDOM.findDOMNode(this.refs.artist).value = '';
     }
 
+    toggleSortOrder() {
+        console.log(sort.get());
+        sort.get().votes == -1 ? sort.set({votes: 1}) : sort.set({votes: -1});
+        this.state.sortLabel === "Desc" ?
+            this.setState({
+                sortLabel: "Asc"
+            }) : this.setState({
+                sortLabel: "Desc"
+            });
+    }
+
     render() {
         return (
             <div className="container">
@@ -55,6 +72,8 @@ class App extends Component {
                                 <button type="submit" className="btn btn-default">Add
                                     song
                                 </button>
+                                <span className="badge pull-right"
+                                      onClick={this.toggleSortOrder.bind(this)}>Sort {this.state.sortLabel}</span>
                             </form>
                         </div>
                     </div>
@@ -71,6 +90,6 @@ class App extends Component {
 
 export default withTracker(() => {
     return {
-        songs: Songs.find({}, {sort: {votes: -1}}).fetch(),
+        songs: Songs.find({}, {sort: sort.get()}).fetch(),
     };
 })(App);

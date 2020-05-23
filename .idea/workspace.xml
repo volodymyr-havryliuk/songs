@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2afbca10-fd68-43c9-8f97-3d2193ea665e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1c65y7PYFQpNkKAaoNqqQmlmpJP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="enabled" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -9,5 +29,17 @@
     <property name="js.meteor.library.was.enabled" value="true" />
     <property name="js.meteor.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="344" y="0" key="CommitChangelistDialog2" timestamp="1590197118380">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="344" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1590197118380" />
   </component>
 </project>
